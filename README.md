@@ -99,7 +99,7 @@ sed -i -e '2s/.*/1,Indiana Jones/' /tmp/User.csv
 ### 4. Load schema and import data
 
 A graph schema can be loaded from either the Gremlin console or a java utility. You can check the
-doc [doc/source/users_guide.md](doc/source/users_guide.md) for details. Alternatively, just run one command in `janusgraph-utils` folder to 
+doc [doc/source/users_guide.md](doc/users_guide.md) for details. Alternatively, just run one command in `janusgraph-utils` folder to 
 load schema and import data.
 ```
 export JANUSGRAPH_HOME=~/janusgraph
