@@ -142,7 +142,7 @@ Method: POST
 URL: http://x.x.x.x:8182
 Body: {"gremlin":“query_to_run"}
 ```
-You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt`).
+You can find sample search and insert queries in [samples/twitter-like-queries.txt](samples/twitter-like-queries.txt).
 
 # Sample output
 
