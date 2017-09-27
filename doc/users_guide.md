@@ -2,7 +2,7 @@
 
 Utility tools that can be used with JanusGraph, including:
 
-- [JanusGraphSchemaImporter](#janusgraphschemaimporter): a groovy script that imports GraphSON schema document into JanusGraph
+- [JanusGraphSchemaImporter](#janusgraphschemaimporter): a groovy script that imports a graph schema definition, a JSON representation of the JanusGraph schema, into JanusGraph
 - [Synthetic data generator](#synthetic-data-generator): a tool for generating synthetic data into CSV files
 - [Data importer](#import-csv-file-to-janusgraph): a tool to import data into JanusGraph from CSV files
 
