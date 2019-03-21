@@ -90,11 +90,19 @@ public class VertexLoaderWorker extends Worker {
             }
 
             // Update property only if it does not exist already
-            if (!v.properties(propName).hasNext()) {
-                // TODO Convert properties between data types. e.g. Date
-                Object convertedValue = BatchHelper.convertPropertyValue(value,
-                        graphTransaction.getPropertyKey(propName).dataType());
-                v.property(propName, convertedValue);
+            // Removes the vertex in catch block if uniqueness constraint fails for a key and value 
+            try {
+            	if (!v.properties(propName).hasNext()) {
+            		// TODO Convert properties between data types. e.g. Date
+            		Object convertedValue = BatchHelper.convertPropertyValue(value,    							
+            				graphTransaction.getPropertyKey(propName).dataType());
+            		v.property(propName, convertedValue);
+            	}
+            } catch (Exception error) {
+            	log.error("Error in update property::acceptRecord:: Vertex:: "+vertexLabel+" :: "+error);
+            	v.remove();
+            	log.info("acceptRecord::Vertex Removed");
+            	return;
             }
         }
 
