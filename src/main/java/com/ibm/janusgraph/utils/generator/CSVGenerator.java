@@ -50,7 +50,7 @@ public class CSVGenerator {
     private long CURRENT_TIME = cal.getTimeInMillis();
     private int[] RANDOM_INT_RANGE = {100000,99999999};
     private long[] RANDOM_TIME_RANGE = {(long)0, CURRENT_TIME};
-    private SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("dd-MMM-yyyy");
+    private SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 
     /**
      * Initialize csv generator
